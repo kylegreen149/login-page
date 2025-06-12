@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import { ReactComponent as EyeIcon} from "./eye-password-show"
+import { ReactComponent as EyeIcon2} from "./eye-password-hide"
 
 const PasswordInput = ({value, onChange}) => {
     const [showPassword, setShowPassword] = useState(false)
@@ -23,7 +25,7 @@ const PasswordInput = ({value, onChange}) => {
             cursor: "pointer",
             }}
         >
-            {showPassword ? "🙈" : "👁"}
+            {showPassword ? <EyeIcon2 /> : <EyeIcon />}
         </span>
         </div>
 
