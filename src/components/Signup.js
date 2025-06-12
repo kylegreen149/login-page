@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PasswordInput from "./PasswordInput"
 
 const Signup = () => {
     const [formData, setFormData] = useState({"email": "", "username": "", "password": ""})
@@ -78,7 +79,7 @@ const Signup = () => {
                     {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
                 </label>
                 <label>Password
-                    <input type="password" name="password" placeholder="Enter password" value={formData.password} onChange={handleChange}/>
+                    <PasswordInput value={formData.password} onChange={handleChange} />
                     {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
                 </label>
                 <button type="submit" disabled={isDisabled}>Sign Up</button>

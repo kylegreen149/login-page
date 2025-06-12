@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import { ReactComponent as EyeIcon} from "./eye-password-show"
-import { ReactComponent as EyeIcon2} from "./eye-password-hide"
+import '../App.css';
+import { ReactComponent as PasswordShow} from "../eye-password-show.svg"
+import { ReactComponent as PasswordHide} from "../eye-password-hide.svg"
 
 const PasswordInput = ({value, onChange}) => {
     const [showPassword, setShowPassword] = useState(false)
@@ -19,13 +20,14 @@ const PasswordInput = ({value, onChange}) => {
             onClick={() => setShowPassword(!showPassword)}
             style={{
             position: "absolute",
-            right: "5px",
+            right: "10px",
             top: "50%",
             transform: "translateY(-50%)",
             cursor: "pointer",
+            fontSize: "16px"
             }}
         >
-            {showPassword ? <EyeIcon2 /> : <EyeIcon />}
+            {showPassword ? <PasswordHide className="password-hide" width="16px" height="16px"/> : <PasswordShow className="password-show" width="16px" height="16px"/>}
         </span>
         </div>
 
