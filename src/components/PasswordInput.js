@@ -16,7 +16,7 @@ const PasswordInput = ({value, onChange}) => {
             onChange={onChange}
             style={{ paddingRight: "30px" }}
         />
-        <span
+        {value !== "" ? <span
             onClick={() => setShowPassword(!showPassword)}
             style={{
             position: "absolute",
@@ -28,7 +28,7 @@ const PasswordInput = ({value, onChange}) => {
             }}
         >
             {showPassword ? <PasswordHide className="password-hide" width="16px" height="16px"/> : <PasswordShow className="password-show" width="16px" height="16px"/>}
-        </span>
+        </span> : <span style={{display: "none"}}></span>}
         </div>
 
     )
