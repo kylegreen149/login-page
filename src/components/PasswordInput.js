@@ -27,7 +27,7 @@ const PasswordInput = ({value, onChange}) => {
             fontSize: "16px"
             }}
         >
-            {showPassword ? <PasswordHide className="password-hide" width="16px" height="16px"/> : <PasswordShow className="password-show" width="16px" height="16px"/>}
+            {showPassword ? <PasswordHide className="password-hide" width="16px" height="16px" title="Hide Password"/> : <PasswordShow className="password-show" width="16px" height="16px" title="Show password"/>}
         </span> : <span style={{display: "none"}}></span>}
         </div>
 
